@@ -1,0 +1,56 @@
+{
+    "Company": {
+        "fields": [
+            "is_deleted",
+            {"crawling_status": {"from": 13, "to": 10}}
+        ],
+        "when_created": true,
+        "when_physically_deleted": true
+    },
+    "Event": {
+        "fields": [
+            "is_deleted",
+            {"crawling_status": {"from": 13, "to": 10}},
+            "is_blacklisted"
+        ],
+        "when_created": true,
+        "when_physically_deleted": true
+    },
+    "Webinar": {
+        "fields": [
+            "is_deleted",
+            {"crawling_status": {"from": 13, "to": 10}},
+            "is_blacklisted"
+        ],
+        "when_created": true,
+        "when_physically_deleted": true
+    },
+    "ContentItem": {
+        "fields": [
+            "is_deleted",
+            {"crawling_status": {"from": 13, "to": 10}},
+            "is_blacklisted"
+        ],
+        "when_created": true,
+        "when_physically_deleted": true,
+        "notify": "Company"
+    },
+    "CompanyForEvent": {
+        "fields": ["is_deleted", "is_blacklisted"],
+        "when_created": true,
+        "when_physically_deleted": true,
+        "notify": "Event"
+    },
+    "CompanyForWebinar": {
+        "fields": ["is_deleted"],
+        "when_created": true,
+        "when_physically_deleted": true,
+        "notify": "Webinar"
+    },
+    "CompanyCompetitor": {
+        "fields": ["is_deleted", "is_blacklisted"],
+        "when_created": true,
+        "when_physically_deleted": true,
+        "notify": "Company"
+    }
+}
